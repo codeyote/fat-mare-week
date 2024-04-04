@@ -1,6 +1,8 @@
+import { fetchConfig } from "../lib/data";
 import { updateConfig } from "../lib/actions";
 
-export default function Page() {
+export default async function Page() {
+  const adminConfig = await Promise.resolve(fetchConfig())
   return (
     <main className="flex h-dvh flex-col">
       <form action={updateConfig}>
@@ -16,6 +18,7 @@ export default function Page() {
             <input
               id="streamUrl"
               name="streamUrl"
+              defaultValue={adminConfig.streamUrl}
               type="url"
               className="peer block w-full rounded-md border border-gray-200 py-2 pl-10 text-sm outline-2 placeholder:text-gray-500"
             />
@@ -32,6 +35,7 @@ export default function Page() {
             <input
               id="alertNumber"
               name="alertNumber"
+              defaultValue={adminConfig.alertNumber}
               type="tel"
               className="peer block w-full rounded-md border border-gray-200 py-2 pl-10 text-sm outline-2 placeholder:text-gray-500"
             />
