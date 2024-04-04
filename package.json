@@ -11,13 +11,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@vercel/kv": "^1.0.1",
     "clicksend": "^5.0.79",
     "next": "14.1.4",
     "next-video": "^0.8.6",
     "prettier": "^3.2.5",
     "react": "^18",
     "react-dom": "^18",
-    "redis": "^4.6.13",
     "twilio": "^5.0.1",
     "zod": "^3.22.4"
   },
