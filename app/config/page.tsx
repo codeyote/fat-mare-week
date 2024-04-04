@@ -20,7 +20,7 @@ export default async function Page() {
               name="streamUrl"
               defaultValue={adminConfig.streamUrl}
               type="url"
-              className="peer block w-full rounded-md border border-gray-200 py-2 pl-10 text-sm outline-2 placeholder:text-gray-500"
+              className="max-w-xs peer block w-full rounded-md border border-gray-200 py-2 pl-10 text-sm outline-2 placeholder:text-gray-500"
             />
           </div>
 
@@ -37,7 +37,7 @@ export default async function Page() {
               name="alertNumber"
               defaultValue={adminConfig.alertNumber}
               type="tel"
-              className="peer block w-full rounded-md border border-gray-200 py-2 pl-10 text-sm outline-2 placeholder:text-gray-500"
+              className="max-w-xs peer block w-full rounded-md border border-gray-200 py-2 pl-10 text-sm outline-2 placeholder:text-gray-500"
             />
           </div>
           {/* Alert Consent */}
