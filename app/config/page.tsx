@@ -3,6 +3,7 @@ import { updateConfig } from "../lib/actions";
 
 export default async function Page() {
   const adminConfig = await Promise.resolve(fetchConfig())
+  console.log(adminConfig)
   return (
     <main className="flex h-dvh flex-col">
       <form action={updateConfig}>

@@ -1,4 +1,5 @@
 "use server";
+import { kv } from "@vercel/kv";
 import { Twilio } from "twilio";
 
 export async function sendTextAlert() {
@@ -22,7 +23,8 @@ export async function sendTextAlert() {
 }
 
 export async function updateConfig(formData: FormData) {
-  console.log(formData)
-  console.log(formData.get("streamUrl"))
-  console.log(formData.get("alertNumber"))
+  console.log('goat)')
+  await kv.set("streamUrl", formData.get("streamUrl"))
+  await kv.set("alertNumber", formData.get("alertNumber"))
+  console.log('pig')
 }
